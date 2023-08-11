@@ -1,14 +1,22 @@
 <h1>Opportunities GO</h1>
-
+<img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" width="25%" height="25%">
 <p1>
   
-API created using golang in order to study the language and its libraries, such as gin.
-Knowledge of clean code and API documentation was applied using swagger.
+This project is a modern job opportunities API built using Golang, currently one of the highest paying programming languages. The API is powered by Go-Gin as a router, GoORM for database communication, SQLite as the database, and Swagger for API documentation and testing. The project follows a modern package structure to keep the codebase organized and maintainable.
 
-The API is a CRUD of a job posting service, where job vacancies can be registered.
+---
+
+## Features
+
+- Introduction to Golang and building modern APIs
+- Development environment setup for creating the API
+- Using Go-Gin as a router for route management
+- Implementing SQLite as the database for the API
+- Using GoORM for communication with the database
+- Integrating Swagger for API documentation and testing
+- Creating a modern package structure for organizing the project
+- Implementing a complete job opportunities API with endpoints for searching, creating, editing, and deleting opportunities
 </p1>
-
-<img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" width="25%" height="25%">
 
 ## Installation
 
@@ -51,3 +59,27 @@ This project uses the following tools:
 After the API is running, you can use the Swagger UI to interact with the endpoints for searching, creating, editing, and deleting job opportunities. The API can be accessed at `http://localhost:$PORT/swagger/index.html`.
 
 Default $PORT if not provided=8080.
+
+## Docker and Docker Compose
+
+This project includes a `Dockerfile` and `docker-compose.yml` file for easy containerization and deployment. Here are the most common Docker and Docker Compose commands you may want to use:
+
+- `docker build -t your-image-name .`: Build a Docker image for the project. Replace `your-image-name` with a name for your image.
+- `docker run -p 8080:8080 -e PORT=8080 your-image-name`: Run a container based on the built image. Replace `your-image-name` with the name you used when building the image. You can change the port number if necessary.
+
+If you want to use Docker Compose, follow these commands:
+
+- `docker compose build`: Build the services defined in the `docker-compose.yml` file.
+- `docker compose up`: Run the services defined in the `docker-compose.yml` file.
+
+To stop and remove containers, networks, and volumes defined in the `docker-compose.yml` file, run:
+
+```sh
+docker-compose down
+```
+
+For more information on Docker and Docker Compose, refer to the official documentation:
+
+- [Docker](https://docs.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
